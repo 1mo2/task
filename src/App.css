@@ -1,0 +1,23 @@
+
+body{
+    background-color: rgb(30, 37, 44);
+}
+.d-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.w-50{
+    height: 50vh;
+    width: 100%;
+   
+}
+.h-100vh{
+    height: 50vh;
+    
+}
+table{
+    width: 100%;
+}
+
