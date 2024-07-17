@@ -10,7 +10,7 @@ function Chart() {
     const [userData, setUserData] = useState([])
 
     useEffect(() => {
-        axios.get('https://raw.githubusercontent.com/1mo2/event-task/main/db.json')
+        axios.get('https://raw.githubusercontent.com/1mo2/task/main/db.json')
             .then(({ data }) => setUserData(data.transactions))
             .catch((err) => console.log(err))
     }, [])
