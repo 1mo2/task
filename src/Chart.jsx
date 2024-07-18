@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import { Line } from "react-chartjs-2"
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js'
 
-// Register Chart.js components
+
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend)
 
 function Chart() {
@@ -15,34 +15,7 @@ function Chart() {
             .catch((err) => console.log(err))
     }, [])
 
-    // const chartData = {
-    //     labels: userData.map((data) => data.date),
-    //     datasets: [
-    //         {
-    //             label: 'Transactions Amount',
-    //             data: userData.map((data) => data.amount),
-    //             borderColor: '#85bb65', // Changed to a teal color
-    //             backgroundColor: '#85bb65', // Changed to a lighter teal
-    //             pointStyle: 'circle',
-    //             pointRadius: 5,
-    //             pointHoverRadius: 7
-    //         }
-    //     ]
-    // }
-    // const chartOptions = {
-    //     scales: {
-    //         x: {
-    //             ticks: {
-    //                 color: '#FFF' // Changed x-axis label color to blue
-    //             }
-    //         },
-    //         y: {
-    //             ticks: {
-    //                 color: '#FFF' // Changed y-axis label color to pink
-    //             }
-    //         }
-    //     }
-    // }
+
 
     return (
         <>

@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import axios from 'axios'
-// import Chart from './Chart'
+
 
 import { Line } from "react-chartjs-2"
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js'
@@ -63,8 +63,8 @@ const filteredTransData = customerId
         {
             label: 'Transactions Amount',
             data: filteredTransData.map((data) => data.amount),
-            borderColor: '#85bb65', // Changed to a teal color
-            backgroundColor: '#85bb65', // Changed to a lighter teal
+            borderColor: '#85bb65', 
+            backgroundColor: '#85bb65',
             pointStyle: 'circle',
             pointRadius: 5,
             pointHoverRadius: 7
@@ -75,12 +75,12 @@ const filteredTransData = customerId
     scales: {
         x: {
             ticks: {
-                color: '#FFF' // Changed x-axis label color to blue
+                color: '#FFF' 
             }
         },
         y: {
             ticks: {
-                color: '#FFF' // Changed y-axis label color to pink
+                color: '#FFF' 
             }
         }
     }
@@ -165,7 +165,7 @@ const filteredTransData = customerId
   value={customerId === null ? "" : customerId}
    id="countries"
     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-    <option value="" selected>Choose a country</option>
+    <option value="" selected>Choose a customer</option>
     {customers.map((customer) => {
       return <option value={customer.id} key={customer.id}>{customer.name}</option>
 
