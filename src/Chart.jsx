@@ -15,40 +15,39 @@ function Chart() {
             .catch((err) => console.log(err))
     }, [])
 
-    const chartData = {
-        labels: userData.map((data) => data.date),
-        datasets: [
-            {
-                label: 'Dataset',
-                data: userData.map((data) => data.amount),
-                borderColor: '#85bb65', // Changed to a teal color
-                backgroundColor: '#85bb65', // Changed to a lighter teal
-                pointStyle: 'circle',
-                pointRadius: 5,
-                pointHoverRadius: 7
-            }
-        ]
-    }
-    const chartOptions = {
-        scales: {
-            x: {
-                ticks: {
-                    color: '#FFF' // Changed x-axis label color to blue
-                }
-            },
-            y: {
-                ticks: {
-                    color: '#FFF' // Changed y-axis label color to pink
-                }
-            }
-        }
-    }
+    // const chartData = {
+    //     labels: userData.map((data) => data.date),
+    //     datasets: [
+    //         {
+    //             label: 'Transactions Amount',
+    //             data: userData.map((data) => data.amount),
+    //             borderColor: '#85bb65', // Changed to a teal color
+    //             backgroundColor: '#85bb65', // Changed to a lighter teal
+    //             pointStyle: 'circle',
+    //             pointRadius: 5,
+    //             pointHoverRadius: 7
+    //         }
+    //     ]
+    // }
+    // const chartOptions = {
+    //     scales: {
+    //         x: {
+    //             ticks: {
+    //                 color: '#FFF' // Changed x-axis label color to blue
+    //             }
+    //         },
+    //         y: {
+    //             ticks: {
+    //                 color: '#FFF' // Changed y-axis label color to pink
+    //             }
+    //         }
+    //     }
+    // }
 
     return (
         <>
 
         <div className="w-full">
-            <h1>Charts Component</h1>
             <Line className="w-100" data={chartData}  options={chartOptions}/>
         </div> 
         
